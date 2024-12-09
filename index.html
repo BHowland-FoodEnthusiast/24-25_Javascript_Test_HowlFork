@@ -25,8 +25,10 @@
 					<li><a href="#">Nav Link 5</a></li>
 					<li><a href="#">Nav Link 6</a></li>
 					<li><a href="#">Nav Link 7</a></li>
+					<li><a href="newPage.html">Clear</a></li>
 					<!-- Buttons for Task 3 and Task 4 should be placed here -->
-					
+					<li><button onclick="hideDir()">Click me!</button></li>
+
 				</ul>
 			</div>
 		</div>
@@ -38,8 +40,9 @@
 
 					<!-- Paragraphs -->
 					<h3>Basic Directions</h3>
-					<p>This project is meant to assess your understanding of Javascript usage within a webpage.  There are five tasks that you must complete.  The tasks are functionality that will be added to this page.  Inside of the folder you found this html file, you will see a folder called "assets".  Within that, another folder called "javascript" has 5 files labeled task1.js to task5.js.  For each task, place your javascript code within the appropriate file.  The files are already linked to this page in the <b>head</b> of this document.  The instructions for each task are listed below.</p>
+					<p id="basicDirections">This project is meant to assess your understanding of Javascript usage within a webpage.  There are five tasks that you must complete.  The tasks are functionality that will be added to this page.  Inside of the folder you found this html file, you will see a folder called "assets".  Within that, another folder called "javascript" has 5 files labeled task1.js to task5.js.  For each task, place your javascript code within the appropriate file.  The files are already linked to this page in the <b>head</b> of this document.  The instructions for each task are listed below.</p>
 					<hr>
+
 
 					<h3>Tasks</h3>
 					<p>The tasks that you need to accomplish are listed below.  If you have any questions, feel free to ask me.  If it is over the weekend, feel free to email me at <a href="mailto:akiedes@vtsd.com">akiedes@vtsd.com</a>.  If there is a place on the webpage where an element needs to be added for a task, place it within the area labeled for that task.</p>
@@ -62,15 +65,19 @@
 					<hr>
 
 					<h3>Task 1 - The Image</h3>
-					<img onClick = "functionName()" src="assets/img/compIcon.png" id="imageTask1"><br />
-					<button style="display:none" id="buttonTask1">Click Me</button>
+					<!--- I added an ID to this image, so I can grab it with JS, and
+					added a function to show the button --->
+					<img src="assets/img/compIcon.png" id="imageTask1" onmouseover="mouseOver()"><br />
+					<button style="display:none" onclick="task1Click()" id="buttonTask1">Click Me</button>
 					<hr>
 										
 					<h3>Task 2 - The Table</h3>
 					<!-- Buttons for this task should be entered before the table tag. -->
-					
-					
-					<table class="table table-striped">
+					<p>These buttons change the color of the table below for accessibility.</p>
+					<button id="blue" onclick="bluFunction()">Blue</button>
+					<button id="red" onclick="redFunction()">Red</button>
+					<button id="purple" onclick="purpFunction()">Purple</button>
+					<table class="table table-striped" id="task2Table">
 						<thead>
 							<tr>
 								<th>#</th>
